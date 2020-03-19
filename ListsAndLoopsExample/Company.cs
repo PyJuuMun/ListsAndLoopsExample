@@ -10,6 +10,11 @@ namespace ListsAndLoopsExample
         public Person ContactPerson;
         public string Country;
 
+        public Company()
+        {
+        
+        }
+
         public Company(string CompanyName, Person ContactPerson, string Country)
         {
             this.CompanyName = CompanyName;

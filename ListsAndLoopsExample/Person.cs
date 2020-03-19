@@ -9,9 +9,14 @@ namespace ListsAndLoopsExample
         public string Etunimi;
         public string Sukunimi;
         public string Email;
-        public int Puhelin;
+        public string Puhelin;
 
-        public Person(string Etunimi, string Sukunimi, string Email, int Puhelin)
+        public Person()
+        {
+
+        }
+
+        public Person(string Etunimi, string Sukunimi, string Email, string Puhelin)
         {
             this.Etunimi = Etunimi;
             this.Sukunimi = Sukunimi;

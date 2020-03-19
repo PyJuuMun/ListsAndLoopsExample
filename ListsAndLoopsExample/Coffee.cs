@@ -29,7 +29,7 @@ namespace ListsAndLoopsExample
             this.brand = brand;
         }
 
-        public Coffee(string brand, double price, Roast roast, string importer)
+        public Coffee(string brand, double price, Roast roast, string importer = "default")
         {
             this.brand = brand;
             this.price = price;

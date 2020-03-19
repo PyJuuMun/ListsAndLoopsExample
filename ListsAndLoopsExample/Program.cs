@@ -6,15 +6,28 @@ namespace ListsAndLoopsExample
     {
         static void Main(string[] args)
         {
-            var dh = new Datahandler();
-            var kahvi = dh.CreateCoffee();
-            dh.coffees.Add(kahvi);
+            Datahandler dh = new Datahandler();
+            dh.FillPersonsWithTestData();
+            dh.FillCompaniesWithTestData();
+            dh.AddNewCompanyToList();
+            dh.PrintCompanyList();
+            Console.ReadKey();
+            Console.Clear();
+            Company company = dh.SelectCompanyFromList();
+            Console.WriteLine($"Chosen {company.CompanyName}");
 
-            var tyyppi = dh.CreatePerson();
-            dh.persons.Add(tyyppi);
 
-            var paketti = new Coffee("Presidentti", 3.40, Coffee.Roast.light, "joku");
-            Console.WriteLine($"enum: {(int)paketti.roast}");
+            //vanha koodi kommentoitu ulos 19.3
+
+            //var dh = new Datahandler();
+            //var kahvi = dh.CreateCoffee();
+            //dh.coffees.Add(kahvi);
+
+            //var tyyppi = dh.CreatePerson();
+            //dh.persons.Add(tyyppi);
+
+            //var paketti = new Coffee("Presidentti", 3.40, Coffee.Roast.light, "joku");
+            //Console.WriteLine($"Paahto: {(int)paketti.roast}");
 
             //var paketti1 = new Coffee("Presidentti");
             //var paketti2 = new Coffee("Kulta Katriina");
@@ -45,6 +58,22 @@ namespace ListsAndLoopsExample
             //datahandler -luokka. list<cofee>, list<person>
             //metodi joke kysyy kahvin merkin, hinnan, roast -> luo näistä instanssin Coffee -> lisäää ko. instanssin listaan.
         }
+
+        //19.3 lisätyt ohjeet/vinkit
+
+        //fill DataHandler persons with test dara
+
+        //dh.fillPersonsWithTestData();
+        //dh.AddPersonToList();
+        //dh.PrintPersonList();
+        //Console.ReadKey();
+
+        //Console.Clear();
+        //Console.WriteLine("Valitse henkilö");
+        //var person = dh.SelectPersonFromList();
+        //Console.WriteLine("\n\n");
+        //Console.WriteLine($"Valittu : {person.firstName} {person.lastName} {person.email}");
+
     }
 
 
